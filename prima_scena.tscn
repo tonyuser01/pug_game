@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ps2njhxvvxxj"]
+
+[ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://player.tscn" id="1_7rlqy"]
+[ext_resource type="PackedScene" uid="uid://cudcnq20bv6ur" path="res://pasare.tscn" id="2_qyavi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbepg"]
+
+[node name="Node" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(488, 389)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_tbepg")
+
+[node name="player" parent="." instance=ExtResource("1_7rlqy")]
+position = Vector2(518, 317)
+
+[node name="pasare" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(617, 346)
+
+[node name="pasare2" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(1019, 340)
+
+[node name="pasare3" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(794, 291)

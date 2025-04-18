@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://cudcnq20bv6ur"]
+
+[ext_resource type="Texture2D" uid="uid://fci3efuce2mk" path="res://pasare_joc_pugus.png" id="1_5i3rp"]
+[ext_resource type="Script" uid="uid://girj6mccumt3" path="res://pasare.gd" id="1_14lre"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14lre"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jd72"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbki4"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si75y"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f33mn"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ects5"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2h1o"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8m2h"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nekdf"]
+atlas = ExtResource("1_5i3rp")
+region = Rect2(384, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i3rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14lre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jd72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbki4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si75y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f33mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ects5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2h1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8m2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nekdf")
+}],
+"loop": true,
+"name": &"pasare",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7yqh"]
+radius = 7.49812
+
+[node name="pasare" type="Area2D"]
+script = ExtResource("1_14lre")
+damage = 50
+movement_speed = 400.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, 0)
+scale = Vector2(1.28854, 1.28854)
+sprite_frames = SubResource("SpriteFrames_5i3rp")
+animation = &"pasare"
+autoplay = "pasare"
+frame_progress = 0.101592
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+rotation = 3.14159
+scale = Vector2(2.26724, 2.26724)
+shape = SubResource("CircleShape2D_d7yqh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
