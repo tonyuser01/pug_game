@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ps2njhxvvxxj"]
+[gd_scene load_steps=7 format=3 uid="uid://ps2njhxvvxxj"]
 
 [ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://player.tscn" id="1_7rlqy"]
+[ext_resource type="PackedScene" uid="uid://cudcnq20bv6ur" path="res://pasare.tscn" id="2_qyavi"]
 [ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://spawner.tscn" id="3_tbepg"]
 [ext_resource type="Script" uid="uid://bkwjg6tc6t881" path="res://wall.gd" id="4_sr8uh"]
 
@@ -17,18 +18,34 @@ position = Vector2(488, 389)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_tbepg")
 
+[node name="player" parent="." instance=ExtResource("1_7rlqy")]
+position = Vector2(518, 317)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(-33, -49)
+zoom = Vector2(1.5, 1.5)
+
+[node name="pasare" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(783, 271)
+
+[node name="pasare2" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(1046, 277)
+
+[node name="pasare3" parent="." instance=ExtResource("2_qyavi")]
+position = Vector2(918, 273)
+
+[node name="spawner" parent="." instance=ExtResource("3_tbepg")]
+position = Vector2(677, 122)
+
 [node name="wall" type="Area2D" parent="." node_paths=PackedStringArray("player_node")]
 script = ExtResource("4_sr8uh")
 player_node = NodePath("../player")
+max_distance = null
+_damage = null
+movent_speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 position = Vector2(186, 258)
 shape = SubResource("RectangleShape2D_tbepg")
-
-[node name="player" parent="." instance=ExtResource("1_7rlqy")]
-position = Vector2(518, 317)
-
-[node name="spawner" parent="player" instance=ExtResource("3_tbepg")]
-position = Vector2(572, -25)
 
 [connection signal="body_entered" from="wall" to="wall" method="_on_body_entered"]
