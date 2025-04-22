@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3gedvhqhoowb"
-path="res://.godot/imported/pug_transparent.png-fe64726212ca0dafad60c260110192f7.ctex"
+uid="uid://dpdkuie1k1yhs"
+path="res://.godot/imported/Florin.png-39eaa4e71c88068fb1dc41eb5cc68c18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pug_transparent.png"
-dest_files=["res://.godot/imported/pug_transparent.png-fe64726212ca0dafad60c260110192f7.ctex"]
+source_file="res://Florin.png"
+dest_files=["res://.godot/imported/Florin.png-39eaa4e71c88068fb1dc41eb5cc68c18.ctex"]
 
 [params]
 

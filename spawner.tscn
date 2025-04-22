@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_y68oj"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, -70, 0, 0, 0, 5.46411, 0, 70)
+"points": PackedVector2Array(0, 0, 0, 0, 0, -50, 0, 0, 0, 5.46411, 0, 70)
 }
 point_count = 2
 
@@ -17,7 +17,7 @@ _scena_pasare = ExtResource("2_ttk4a")
 curve = SubResource("Curve2D_y68oj")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(0, -70)
+position = Vector2(0, -50)
 rotation = 1.5708
 
 [node name="Timer" type="Timer" parent="."]

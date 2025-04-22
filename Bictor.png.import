@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvyafs442la2u"
-path="res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"
+uid="uid://cdp3gxju1it03"
+path="res://.godot/imported/Bictor.png-8a1a4c4a2c5052276a054e56b47aeab7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pug_running.png"
-dest_files=["res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"]
+source_file="res://Bictor.png"
+dest_files=["res://.godot/imported/Bictor.png-8a1a4c4a2c5052276a054e56b47aeab7.ctex"]
 
 [params]
 

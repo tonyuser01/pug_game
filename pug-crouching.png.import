@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvyafs442la2u"
-path="res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"
+uid="uid://48f0gk7ag0lv"
+path="res://.godot/imported/pug-crouching.png-9e40b21e6c73bfabb65f9045238b8cb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pug_running.png"
-dest_files=["res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"]
+source_file="res://pug-crouching.png"
+dest_files=["res://.godot/imported/pug-crouching.png-9e40b21e6c73bfabb65f9045238b8cb1.ctex"]
 
 [params]
 
