@@ -16,15 +16,21 @@ const GRAVITY = 981.0
 var _speed: int = normal_speed
 var isCrouching: bool = false
 var isRunning: bool = false
-
+var coin_gathered: int =0;
 # Health and game stats
-var hp: int = 100
-
+var max_hp: int = 100;
+var hp: int = 1 : 
+	set (value):
+		hp=value
+		hp=clamp (hp,0,max_hp);
+		
 func _ready() -> void:
 	# Initialize animations
 	$AnimatedSprite2D.play("idle")
+	hp=max_hp;
 
 func _physics_process(delta: float) -> void:
+	
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
@@ -101,13 +107,17 @@ func _update_hitbox() -> void:
 		$CollisionShape2D.position.y = -6.0
 
 func _damage_taken(value: int) -> void:
-	hp -= value 
+	
 	if value >0 :
 	# Visual feedback
 		$AnimatedSprite2D.modulate = Color(1.0, 0.53, 0.53)
-	elif value <0 :
-		$AnimatedSprite2D.modulate = Color.LIGHT_GREEN
 		
+	elif value <0 :
+		if hp==max_hp :
+			pass
+		else :
+			$AnimatedSprite2D.modulate = Color.LIGHT_GREEN
+	hp -= value 
 	await get_tree().create_timer(0.15).timeout
 	$AnimatedSprite2D.modulate = Color.WHITE
 	

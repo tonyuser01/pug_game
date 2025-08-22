@@ -1,24 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw5o3spdcdq8v"]
+[gd_scene load_steps=5 format=3 uid="uid://cw5o3spdcdq8v"]
 
 [ext_resource type="Texture2D" uid="uid://b5cec4667e3m3" path="res://cutie_inchisa.png" id="1_g2tbl"]
 [ext_resource type="Script" uid="uid://r70riilaeuw0" path="res://box.gd" id="1_oq5cr"]
+[ext_resource type="PackedScene" uid="uid://dl6hc3cjve5lt" path="res://coin.tscn" id="2_bqn3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2tbl"]
-size = Vector2(20.9633, 15.9166)
+size = Vector2(21.6, 16.4)
 
 [node name="cutie" type="Node2D"]
 script = ExtResource("1_oq5cr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(-2.57592, -2.57592)
-texture = ExtResource("1_g2tbl")
+[node name="coin" parent="." instance=ExtResource("2_bqn3j")]
+position = Vector2(0, -147)
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="cutia" type="Sprite2D" parent="."]
+position = Vector2(0, 29)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_g2tbl")
+offset = Vector2(0, -11.6)
+
+[node name="Area2D" type="Area2D" parent="cutia"]
 rotation = 3.14159
 scale = Vector2(0.38821, 0.38821)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-position = Vector2(-1, -10.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cutia/Area2D"]
+position = Vector2(-5.22435e-05, 20.6074)
 rotation = -3.14159
 scale = Vector2(2.57592, 2.57592)
 shape = SubResource("RectangleShape2D_g2tbl")
@@ -28,5 +34,5 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
-[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="cutia/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

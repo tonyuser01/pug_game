@@ -1,7 +1,6 @@
 extends Node
 @onready  var new_sprite = $CharacterBody2D/Sprite2D
 func _ready():
-	print("hello")
 	new_sprite.x =0;
 func _process(delta: float) -> void: #e pt fiecare frame
 	if new_sprite.x<1060:

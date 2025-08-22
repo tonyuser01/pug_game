@@ -9,12 +9,12 @@ extends Area2D
 # Bird visuals
 @onready var animated_sprite = $AnimatedSprite2D
 
-const golden_bird_rate =20;
+const golden_bird_rate =30;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
 	if randi_range(0,100) <=golden_bird_rate :
-		modulate = Color(1 ,0.843,0) 
+		modulate = Color(0.446,0.934,0.361) 
 		damage= -50
 	# Self-destruct timer
 	await get_tree().create_timer(lifetime).timeout

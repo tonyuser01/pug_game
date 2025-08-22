@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://player.tscn" id="1_7rlqy"]
 [ext_resource type="Script" uid="uid://dpkjb35btxjjx" path="res://hp.gd" id="1_be0hi"]
-[ext_resource type="Script" uid="uid://bxbi1uew8g7x8" path="res://coin_value.gd" id="1_hgaue"]
+[ext_resource type="PackedScene" uid="uid://dl6hc3cjve5lt" path="res://coin.tscn" id="2_a6w6x"]
 [ext_resource type="Texture2D" uid="uid://dpdkuie1k1yhs" path="res://Florin.png" id="2_sr8uh"]
 [ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://Bird_Spawner.tscn" id="3_tbepg"]
 [ext_resource type="Texture2D" uid="uid://cggj5wbs6o0iv" path="res://Mattia.png" id="3_xvu4v"]
@@ -253,7 +253,7 @@ animations = [{
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="coins" type="Label" parent="CanvasLayer"]
+[node name="Score" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -263,27 +263,8 @@ offset_bottom = 49.0
 grow_horizontal = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 50
-text = "Coins
+text = "Score
 "
-
-[node name="coin_value" type="Label" parent="CanvasLayer/coins"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 80.0
-offset_top = -64.5
-offset_right = 157.0
-offset_bottom = 64.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.9375, 0.260954, 0.128174, 1)
-theme_override_font_sizes/font_size = 45
-text = "100
-"
-script = ExtResource("1_hgaue")
 
 [node name="hp" type="Label" parent="CanvasLayer"]
 anchors_preset = 3
@@ -318,17 +299,20 @@ text = "100/100
 "
 script = ExtResource("1_be0hi")
 
-[node name="pamantu" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(488, 389)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="pamantu"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_tbepg")
+
+[node name="coin" parent="StaticBody2D" instance=ExtResource("2_a6w6x")]
+position = Vector2(334, -79)
 
 [node name="wall" type="Area2D" parent="."]
 position = Vector2(4, 213)
 script = ExtResource("4_sr8uh")
 
-[node name="Tigani" type="CollisionShape2D" parent="wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 position = Vector2(186, 38)
 shape = SubResource("RectangleShape2D_tbepg")
 
