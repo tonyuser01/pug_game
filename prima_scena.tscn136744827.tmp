@@ -1,12 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://ps2njhxvvxxj"]
+[gd_scene load_steps=42 format=3 uid="uid://ps2njhxvvxxj"]
 
 [ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://player.tscn" id="1_7rlqy"]
 [ext_resource type="Texture2D" uid="uid://dpdkuie1k1yhs" path="res://Florin.png" id="2_sr8uh"]
-[ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://Bird_Spawner.tscn" id="3_tbepg"]
+[ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://spawner.tscn" id="3_tbepg"]
 [ext_resource type="Texture2D" uid="uid://cggj5wbs6o0iv" path="res://Mattia.png" id="3_xvu4v"]
 [ext_resource type="Texture2D" uid="uid://cdp3gxju1it03" path="res://Bictor.png" id="4_gqbnr"]
 [ext_resource type="Script" uid="uid://bkwjg6tc6t881" path="res://wall.gd" id="4_sr8uh"]
-[ext_resource type="PackedScene" uid="uid://duqoj8e4qu0ok" path="res://box_spawner.tscn" id="6_gqbnr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbepg"]
 
@@ -285,13 +284,10 @@ animation = &"Florin_running"
 autoplay = "Florin_running"
 frame_progress = 0.997068
 
-[node name="Bird_Spawner" parent="wall" instance=ExtResource("3_tbepg")]
-position = Vector2(1730, 66)
-
-[node name="Box_Spawner" parent="wall" instance=ExtResource("6_gqbnr")]
-position = Vector2(1730, 176)
-
 [node name="player" parent="." instance=ExtResource("1_7rlqy")]
 position = Vector2(518, 315)
+
+[node name="spawner" parent="player" instance=ExtResource("3_tbepg")]
+position = Vector2(605, -82)
 
 [connection signal="body_entered" from="wall" to="wall" method="_on_body_entered"]

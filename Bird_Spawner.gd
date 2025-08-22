@@ -5,14 +5,6 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-@warning_ignore("unused_parameter")
-func _process(delta: float) -> void:
-	pass
-
-
-
 func _on_timer_timeout() -> void:
 	_spawn_enemy()
 	
@@ -22,6 +14,7 @@ func _spawn_enemy() -> void :
 	$Path2D/PathFollow2D.progress_ratio =_enemy_position
 	_first_enemy.global_position=$Path2D/PathFollow2D.global_position
 	get_tree().root.add_child(_first_enemy)
+	$Timer.wait_time = randf_range(2,5)
 	
 	
 	

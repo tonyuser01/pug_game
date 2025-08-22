@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://duqoj8e4qu0ok"]
+
+[ext_resource type="Script" uid="uid://xyothw5xpimc" path="res://Box_Spawner.gd" id="1_w51sw"]
+[ext_resource type="PackedScene" uid="uid://cw5o3spdcdq8v" path="res://box.tscn" id="2_iumfr"]
+
+[node name="Box_Spawner" type="Marker2D"]
+script = ExtResource("1_w51sw")
+cutie = ExtResource("2_iumfr")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

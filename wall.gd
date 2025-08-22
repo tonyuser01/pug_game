@@ -1,32 +1,32 @@
 extends Area2D
-@export var player_node : player
-@export var max_distance : int =1000;
-@export var _damage =999;
-@export var movent_speed=200;
-@onready var player_position = player_node.global_position.x ;
-@onready var wall_position= global_position.x ;
-@onready var distance = player_position - wall_position ;
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-	
+
+
+@export var max_distance: int = 1000
+@export var movement_speed: int = 200
+@export var damage: int = 999
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	position.x+=movent_speed *delta;
-	wall_position=global_position.x;
-	if player_node != null:
-		player_position=player_node.global_position.x;
-	distance = player_position - wall_position ;
-	if _is_wall_too_far ()==true :
-		wall_position= player_position-max_distance;
-		position.x=wall_position;
-func _on_body_entered(body: Node2D) -> void:
-	if body is player :
-		body._damage_taken(_damage);
+	# Move chaser forward
+	position.x += movement_speed * delta
+	
+	var player =get_tree().get_first_node_in_group("player")
+	var player_position 
+	# Get positions
+	if player != null:
+		player_position = player.global_position.x
+	else: player_position = global_position.x
+	
+	
+	var wall = global_position.x
+	var distance = player_position - wall
+	
+	
+	# teleport if too far for wall
+	if distance > max_distance:
+		position.x = player_position - max_distance
 
-func _is_wall_too_far () -> bool:
-	if (distance >max_distance):
-		return true;
-	else : return false;
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body._damage_taken(damage)
 	
