@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cudcnq20bv6ur"]
+[gd_scene format=3 uid="uid://cudcnq20bv6ur"]
 
-[ext_resource type="Texture2D" uid="uid://fci3efuce2mk" path="res://pasare_joc_pugus.png" id="1_5i3rp"]
-[ext_resource type="Script" uid="uid://girj6mccumt3" path="res://pasare.gd" id="1_14lre"]
+[ext_resource type="Texture2D" uid="uid://fci3efuce2mk" path="res://assets/sprites/enemies/pasare_joc_pugus.png" id="1_5i3rp"]
+[ext_resource type="Script" uid="uid://girj6mccumt3" path="res://scripts/pasare.gd" id="1_14lre"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_14lre"]
 atlas = ExtResource("1_5i3rp")

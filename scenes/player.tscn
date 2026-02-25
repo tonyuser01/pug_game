@@ -1,10 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://bbayorr7sjsfv"]
+[gd_scene format=3 uid="uid://bbayorr7sjsfv"]
 
-[ext_resource type="Script" uid="uid://cjnofjipiodop" path="res://player.gd" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://cvyafs442la2u" path="res://pug_running.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://2s7edjwq7orf" path="res://pug_idle.png" id="2_onrkg"]
-[ext_resource type="Texture2D" uid="uid://48f0gk7ag0lv" path="res://pug-crouching.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://ba3ai8wg8espq" path="res://pug_walking.png" id="3_sweqy"]
+[ext_resource type="Script" uid="uid://cjnofjipiodop" path="res://scripts/player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cvyafs442la2u" path="res://assets/sprites/player/pug_running.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://2s7edjwq7orf" path="res://assets/sprites/player/pug_idle.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://48f0gk7ag0lv" path="res://assets/sprites/player/pug-crouching.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://ba3ai8wg8espq" path="res://assets/sprites/player/pug_walking.png" id="3_sweqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qyavi"]
 radius = 38.0526
@@ -261,19 +261,19 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
+[node name="player" type="CharacterBody2D" unique_id=452744642 groups=["player"]]
 script = ExtResource("1_i3pqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1532767403]
 position = Vector2(-27, -6)
 shape = SubResource("CircleShape2D_qyavi")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1257666211]
 position = Vector2(-25, -13)
 scale = Vector2(-2.4962, 3.07036)
 sprite_frames = SubResource("SpriteFrames_7rlqy")
 animation = &"crouching"
 autoplay = "idle"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=836398240]
 zoom = Vector2(1.5, 1.5)

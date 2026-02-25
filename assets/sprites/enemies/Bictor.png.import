@@ -2,22 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://48f0gk7ag0lv"
-path="res://.godot/imported/pug-crouching.png-9e40b21e6c73bfabb65f9045238b8cb1.ctex"
+uid="uid://cdp3gxju1it03"
+path="res://.godot/imported/Bictor.png-9f59cbe58e8718f9952dbd7c07cb0114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pug-crouching.png"
-dest_files=["res://.godot/imported/pug-crouching.png-9e40b21e6c73bfabb65f9045238b8cb1.ctex"]
+source_file="res://assets/sprites/enemies/Bictor.png"
+dest_files=["res://.godot/imported/Bictor.png-9f59cbe58e8718f9952dbd7c07cb0114.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

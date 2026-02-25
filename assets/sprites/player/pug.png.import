@@ -2,22 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvyafs442la2u"
-path="res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"
+uid="uid://oxi24b323k2n"
+path="res://.godot/imported/pug.png-bb93e948305d6caf26ed5085a6114b30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pug_running.png"
-dest_files=["res://.godot/imported/pug_running.png-70279d453ea8327f2beae1bb5f7ccc4e.ctex"]
+source_file="res://assets/sprites/player/pug.png"
+dest_files=["res://.godot/imported/pug.png-bb93e948305d6caf26ed5085a6114b30.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

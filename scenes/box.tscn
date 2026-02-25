@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw5o3spdcdq8v"]
+[gd_scene format=3 uid="uid://cw5o3spdcdq8v"]
 
-[ext_resource type="Texture2D" uid="uid://b5cec4667e3m3" path="res://cutie_inchisa.png" id="1_g2tbl"]
-[ext_resource type="Script" uid="uid://r70riilaeuw0" path="res://box.gd" id="1_oq5cr"]
-[ext_resource type="PackedScene" uid="uid://dl6hc3cjve5lt" path="res://coin.tscn" id="2_bqn3j"]
+[ext_resource type="Texture2D" uid="uid://b5cec4667e3m3" path="res://assets/sprites/obstacles/cutie_inchisa.png" id="1_g2tbl"]
+[ext_resource type="Script" uid="uid://r70riilaeuw0" path="res://scripts/box.gd" id="1_oq5cr"]
+[ext_resource type="PackedScene" uid="uid://dl6hc3cjve5lt" path="res://scenes/coin.tscn" id="2_bqn3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2tbl"]
 size = Vector2(21.6, 16.4)

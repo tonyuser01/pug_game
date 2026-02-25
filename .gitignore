@@ -1,3 +1,63 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+.import/
+
+# Godot-specific
+*.translation
+export_presets.cfg
+export.cfg
+
+# Temporary files
+*.tmp
+*.tscn*.tmp
+*.gd.tmp
+*.import.bak
+*~
+
+# OS/platform files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build files
+builds/
+*.exe
+*.pck
+*.zip
+
+# Logs
+*.log
+logs/
+
+# Android
+.gradle/
+local.properties
+*.apk
+*.aab
+
+# iOS
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# MacOS
+*.app
+
+# Backup files
+*.bak
+*~.gdscript
+*~.tscn
+*~.tres

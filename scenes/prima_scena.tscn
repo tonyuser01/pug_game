@@ -1,14 +1,14 @@
-[gd_scene load_steps=45 format=3 uid="uid://ps2njhxvvxxj"]
+[gd_scene format=3 uid="uid://ps2njhxvvxxj"]
 
-[ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://player.tscn" id="1_7rlqy"]
-[ext_resource type="Script" uid="uid://dpkjb35btxjjx" path="res://hp.gd" id="1_be0hi"]
-[ext_resource type="Script" uid="uid://bxbi1uew8g7x8" path="res://coin_value.gd" id="1_hgaue"]
-[ext_resource type="Texture2D" uid="uid://dpdkuie1k1yhs" path="res://Florin.png" id="2_sr8uh"]
-[ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://Bird_Spawner.tscn" id="3_tbepg"]
-[ext_resource type="Texture2D" uid="uid://cggj5wbs6o0iv" path="res://Mattia.png" id="3_xvu4v"]
-[ext_resource type="Texture2D" uid="uid://cdp3gxju1it03" path="res://Bictor.png" id="4_gqbnr"]
-[ext_resource type="Script" uid="uid://bkwjg6tc6t881" path="res://wall.gd" id="4_sr8uh"]
-[ext_resource type="PackedScene" uid="uid://duqoj8e4qu0ok" path="res://box_spawner.tscn" id="6_gqbnr"]
+[ext_resource type="Script" uid="uid://bxbi1uew8g7x8" path="res://scripts/coin_value.gd" id="1_m021y"]
+[ext_resource type="Script" uid="uid://dpkjb35btxjjx" path="res://scripts/hp.gd" id="2_g2eta"]
+[ext_resource type="Script" uid="uid://bkwjg6tc6t881" path="res://scripts/wall.gd" id="3_c4kog"]
+[ext_resource type="Texture2D" uid="uid://dpdkuie1k1yhs" path="res://assets/sprites/enemies/Florin.png" id="4_ei20d"]
+[ext_resource type="Texture2D" uid="uid://cggj5wbs6o0iv" path="res://assets/sprites/enemies/Mattia.png" id="5_ygap8"]
+[ext_resource type="Texture2D" uid="uid://cdp3gxju1it03" path="res://assets/sprites/enemies/Bictor.png" id="6_5r8mt"]
+[ext_resource type="PackedScene" uid="uid://clgyix3md2607" path="res://scenes/Bird_Spawner.tscn" id="7_h4mll"]
+[ext_resource type="PackedScene" uid="uid://duqoj8e4qu0ok" path="res://scenes/box_spawner.tscn" id="8_dj0mg"]
+[ext_resource type="PackedScene" uid="uid://bbayorr7sjsfv" path="res://scenes/player.tscn" id="9_hh4u6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbepg"]
 
@@ -16,43 +16,43 @@
 size = Vector2(209, 272)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ffb4q"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvu4v"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqbnr"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_be0hi"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6w6x"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgaue"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v8cf"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxjfw"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkte6"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(1024, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gja7r"]
-atlas = ExtResource("2_sr8uh")
+atlas = ExtResource("4_ei20d")
 region = Rect2(1152, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_be0hi"]
@@ -94,43 +94,43 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eehul"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1nidv"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avss1"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d4s5l"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45cj7"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_apcvk"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8w6ak"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gq30t"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ulv2"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(1024, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6w2t4"]
-atlas = ExtResource("3_xvu4v")
+atlas = ExtResource("5_ygap8")
 region = Rect2(1152, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l0vwb"]
@@ -172,43 +172,43 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2435u"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t34p2"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_skq48"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7p0o"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l0t2e"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntlol"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jonnk"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eluw3"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srtd3"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(1024, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unqjm"]
-atlas = ExtResource("4_gqbnr")
+atlas = ExtResource("6_5r8mt")
 region = Rect2(1152, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tbepg"]
@@ -249,11 +249,11 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" unique_id=1652196079]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=483108998]
 
-[node name="coins" type="Label" parent="CanvasLayer"]
+[node name="coins" type="Label" parent="CanvasLayer" unique_id=1607193121]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -266,7 +266,7 @@ theme_override_font_sizes/font_size = 50
 text = "Coins
 "
 
-[node name="coin_value" type="Label" parent="CanvasLayer/coins"]
+[node name="coin_value" type="Label" parent="CanvasLayer/coins" unique_id=1970171207]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -283,9 +283,9 @@ theme_override_colors/font_color = Color(0.9375, 0.260954, 0.128174, 1)
 theme_override_font_sizes/font_size = 45
 text = "100
 "
-script = ExtResource("1_hgaue")
+script = ExtResource("1_m021y")
 
-[node name="hp" type="Label" parent="CanvasLayer"]
+[node name="hp" type="Label" parent="CanvasLayer" unique_id=1392632861]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -301,7 +301,7 @@ theme_override_colors/font_color = Color(0.504478, 0.925781, 0.0831757, 1)
 theme_override_font_sizes/font_size = 45
 text = "Hp:"
 
-[node name="value" type="Label" parent="CanvasLayer/hp"]
+[node name="value" type="Label" parent="CanvasLayer/hp" unique_id=2011411603]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -316,37 +316,37 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "100/100
 "
-script = ExtResource("1_be0hi")
+script = ExtResource("2_g2eta")
 
-[node name="pamantu" type="StaticBody2D" parent="."]
+[node name="pamantu" type="StaticBody2D" parent="." unique_id=1896087493]
 position = Vector2(488, 389)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="pamantu"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="pamantu" unique_id=1963700317]
 shape = SubResource("WorldBoundaryShape2D_tbepg")
 
-[node name="wall" type="Area2D" parent="."]
+[node name="wall" type="Area2D" parent="." unique_id=281766888]
 position = Vector2(4, 213)
-script = ExtResource("4_sr8uh")
+script = ExtResource("3_c4kog")
 
-[node name="Tigani" type="CollisionShape2D" parent="wall"]
+[node name="Tigani" type="CollisionShape2D" parent="wall" unique_id=1174811651]
 position = Vector2(186, 38)
 shape = SubResource("RectangleShape2D_tbepg")
 
-[node name="florin" type="AnimatedSprite2D" parent="wall"]
+[node name="florin" type="AnimatedSprite2D" parent="wall" unique_id=1188251415]
 position = Vector2(243, 26.6156)
 scale = Vector2(2.27524, 2.27524)
 sprite_frames = SubResource("SpriteFrames_be0hi")
 animation = &"Florin_running"
 autoplay = "Florin_running"
 
-[node name="matti" type="AnimatedSprite2D" parent="wall"]
+[node name="matti" type="AnimatedSprite2D" parent="wall" unique_id=1408551336]
 position = Vector2(151, 20)
 scale = Vector2(2.27524, 2.27524)
 sprite_frames = SubResource("SpriteFrames_l0vwb")
 animation = &"Florin_running"
 autoplay = "Florin_running"
 
-[node name="bictor" type="AnimatedSprite2D" parent="wall"]
+[node name="bictor" type="AnimatedSprite2D" parent="wall" unique_id=152430495]
 position = Vector2(217, 33)
 scale = Vector2(2.27524, 2.27524)
 sprite_frames = SubResource("SpriteFrames_tbepg")
@@ -354,13 +354,13 @@ animation = &"Florin_running"
 autoplay = "Florin_running"
 frame_progress = 0.997068
 
-[node name="Bird_Spawner" parent="wall" instance=ExtResource("3_tbepg")]
+[node name="Bird_Spawner" parent="wall" unique_id=399579848 instance=ExtResource("7_h4mll")]
 position = Vector2(1730, 66)
 
-[node name="Box_Spawner" parent="wall" instance=ExtResource("6_gqbnr")]
+[node name="Box_Spawner" parent="wall" unique_id=1475376656 instance=ExtResource("8_dj0mg")]
 position = Vector2(1730, 176)
 
-[node name="player" parent="." instance=ExtResource("1_7rlqy")]
+[node name="player" parent="." unique_id=2121520629 instance=ExtResource("9_hh4u6")]
 unique_name_in_owner = true
 position = Vector2(518, 315)
 
